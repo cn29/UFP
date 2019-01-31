@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 from math import ceil
 
 
-def wd_count(wind_data, dates=[]):
+def wd_count(wind_data, theta, dates=[]):
     # theta of one direction
-    theta = 22.5
+    theta = 45
 
     direct_count = [0]* int(360/theta)
 
@@ -95,11 +95,32 @@ if __name__ == '__main__':
 
     # setting
     top_ratio = 0.5
+    wd_data_file = ''
+    factor_data_file = ''
+    site_name = ''
+    option = 3
+    theta = 45
 
     # read csv file
-    wd_data_file = 'buchanan_wd_scalar.csv'
-    factor_data_file = 'SP2.csv'
-    site_name = 'SP'
+    if option == 1:
+        wd_data_file = 'oakland_int_wd_scalar.csv'
+        factor_data_file = 'EO.csv'
+        site_name = 'EO'
+    elif option == 2:
+        wd_data_file = 'usc_campus_wd_scalar.csv'
+        factor_data_file = 'LA.csv'
+        site_name = 'LA'
+    elif option == 3:
+        wd_data_file = 'LA_airport_wd_scalar.csv'
+        factor_data_file = 'LA.csv'
+        site_name = 'LA-airport'
+    else:
+        wd_data_file = 'buchanan_wd_scalar.csv'
+        factor_data_file = 'SP2.csv'
+        site_name = 'SP'
+
+    print('wd_data_file: {}'.format(wd_data_file))
+    print('site_name: {}'.format(site_name))
 
     wind_data = read_wd_data(wd_data_file)
     factor_data, factor_names = read_factor_data(factor_data_file)
@@ -117,7 +138,10 @@ if __name__ == '__main__':
 
 
     # count directions
-    all_count = wd_count(wind_data, pick_dates)
+    all_count = wd_count(wind_data, theta, pick_dates)
+    for i in range(len(all_count)):
+        if all_count[i] == 0:
+            all_count[i] = 1
 
     # count top and compute ratio
     ratio = [0] * num_factors
@@ -134,19 +158,20 @@ if __name__ == '__main__':
             top_dates_ext.append(next_next)
 
         # count only for top dates
-        select_count = wd_count(wind_data, top_dates_ext)
+        select_count = wd_count(wind_data, theta, top_dates_ext)
         print(f, select_count)
 
         # ratio plot
         ratio[f] = [x/y for x, y in zip(select_count, all_count)]
 
     # plot polar graph
-    thetas = [x*22.5/180 * 3.1415 for x in range(16)]
-    fig, axes = plt.subplots(2, ceil(f/2), subplot_kw=dict(polar=True))
-
+    thetas = [x*theta/180 * 3.1415 for x in range(int(360/theta))]
+    fig, axes = plt.subplots(2, ceil(num_factors/2), subplot_kw=dict(polar=True))
+    print(ceil(num_factors/2))
     for f in range(0, num_factors):
-        x = int(f/3)
-        y = int(f%3)
+        row_fig_num = ceil(num_factors/2)
+        x = int(f/row_fig_num)
+        y = int(f%row_fig_num)
         axes[x, y].set_theta_zero_location("N")
         axes[x, y].set_theta_direction(-1)
         axes[x, y].plot(thetas+[thetas[0]], ratio[f]+[ratio[f][0]], 'ro-', linewidth=3)
