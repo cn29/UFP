@@ -8,7 +8,7 @@ from math import ceil
 
 def wd_count(wind_data, theta, dates=[]):
     # theta of one direction
-    theta = 45
+    theta = theta
 
     direct_count = [0]* int(360/theta)
 
