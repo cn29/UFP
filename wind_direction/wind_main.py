@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from math import ceil
 import numpy as np
 
+from repo_config import *
+
 
 def wd_count(wind_data, theta, dates=[]):
     # theta of one direction
@@ -104,7 +106,7 @@ if __name__ == '__main__':
     site_name = ''
     option = 4
     theta = 22.5
-    data_file_path = './data_files/'
+
 
     # read csv file
     if option == 1:
@@ -112,7 +114,7 @@ if __name__ == '__main__':
         factor_data_file = 'EO.csv'
         site_name = 'EO'
     elif option == 2:
-        wd_data_file = data_file_path+'KCALOSAN107_wd_scalar.csv'
+        wd_data_file = 'KCALOSAN107_wd_scalar.csv'
         factor_data_file = 'LA.csv'
         site_name = 'LA'
     elif option == 3:
@@ -120,13 +122,17 @@ if __name__ == '__main__':
         factor_data_file = 'LA.csv'
         site_name = 'LA-airport'
     elif option == 4:
-        wd_data_file = data_file_path+'KCARICHM10_wd_scalar.csv'
+        wd_data_file = 'KCARICHM10_wd_scalar.csv'
         factor_data_file = 'SP2.csv'
         site_name = 'SP'
     else:
         wd_data_file = 'LA-north main street_wd_scalar.csv'
         factor_data_file = 'LA.csv'
         site_name = 'LA-north main street'
+
+    wd_data_file = DATA_FILE_PATH + wd_data_file
+    factor_data_file = DATA_FILE_PATH + factor_data_file
+
 
     print('wd_data_file: {}'.format(wd_data_file))
     print('site_name: {}'.format(site_name))

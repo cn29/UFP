@@ -1,5 +1,6 @@
 import csv
 import re
+from repo_config import *
 
 
 def find_site(row, site_name):
@@ -39,8 +40,12 @@ if __name__ == '__main__':
         output_wd = 'LA-north main street_wd_scalar.csv'
         site = 'Los Angeles-North Main Street'
         site_id = '2899'
+
+    output_wd = DATA_FILE_PATH + output_wd
+
     # open wd 2016 file
-    file_wd_2016 = r'C:\Users\weixu\Google Drive\CodingProjects\UFP-master\wind_direction\CA_wd_scalar_2016.csv'
+    # file_wd_2016 = r'C:\Users\weixu\Google Drive\CodingProjects\UFP-master\wind_direction\CA_wd_scalar_2016.csv'
+    file_wd_2016 = 'D:\Data\CA_wd_scalar_2016.csv'
     filtered_2016 = []
 
     print('output_wd: {}'.format(output_wd))
@@ -65,7 +70,8 @@ if __name__ == '__main__':
         
         
     # open wd 2015 file 
-    file_name = r'C:\Users\weixu\Google Drive\CodingProjects\UFP-master\wind_direction\kg_2015.txt'
+    # file_name = r'C:\Users\weixu\Google Drive\CodingProjects\UFP-master\wind_direction\kg_2015.txt'
+    file_name = 'D:\Data\kg_2015.txt'
     filtered_2015 = []
     print('Processing wd file 2015: {}...'.format(file_name))
     f = open(file_name, 'r')
