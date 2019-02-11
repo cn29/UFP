@@ -34,7 +34,7 @@ def plotData(tickers, data_matrix, plot_caption, figure_title, y_label, percent_
     f, axarr = plt.subplots(num_plots, sharex=True, sharey=True)
     f.text(0.04, 0.5, y_label, va='center', rotation='vertical')
     if percent_matrix != []:
-        f.text(0.94, 0.5, 'percentage', va='center', rotation='vertical')
+        f.text(0.96, 0.5, 'percentage', va='center', rotation='vertical')
     f.suptitle(figure_title)
     ax2 = []
 
@@ -58,7 +58,7 @@ def plotData(tickers, data_matrix, plot_caption, figure_title, y_label, percent_
             print(percent_matrix[i])
             ax2.append(axarr[i].twinx())
             s2 = percent_matrix[i]
-            ax2[i].plot(x, s2, 'rh', alpha=0.6)
+            ax2[i].plot(x, s2, 'rh', alpha=0.6, markersize=4)
             # ax2[i].tick_params('y', colors='r')
             ax2[i].set_ylim(0, 100)
 
