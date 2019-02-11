@@ -55,15 +55,15 @@ def plotData(tickers, data_matrix, plot_caption, figure_title, y_label, percent_
 
         # plot percent matirx
         if percent_matrix != []:
+            print(percent_matrix[i])
             ax2.append(axarr[i].twinx())
             s2 = percent_matrix[i]
-            ax2[i].plot(x, s2, 'r.', alpha=0.6)
+            ax2[i].plot(x, s2, 'rh', alpha=0.6)
             # ax2[i].tick_params('y', colors='r')
-            ax2[i].set_ylim(0, 1)
+            ax2[i].set_ylim(0, 100)
 
         if i == 0:
             axarr[i].xaxis.set_tick_params(labeltop='on')
-
 
     # plt.ylim((10 ** -1, 10 ** 3))
     plt.show()
@@ -76,7 +76,7 @@ def spotSelect(site):
 
     con_file_name = DATA_FILE_PATH + site + '.csv'
     pct_file_name = DATA_FILE_PATH + site + '_pct.csv'
-    y_label = 'Concentration $(\mu g/m^3)$'
+    y_label = 'Concentration $(ng/m^3)$'
 
     if site == 'EO':
         figure_title = 'East Oakland'
@@ -103,6 +103,5 @@ if __name__ == '__main__':
         for j in range(len(data_matrix[i])):
             if (abs(data_matrix[i][j]) < tol):
                 data_matrix[i][j] = tol
-
 
     plotData(tickers, data_matrix, source_name, figure_title, y_label, percent_matrix)

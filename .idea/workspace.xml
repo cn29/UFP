@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ecf7ce-cae5-44a8-a7ad-562ea8a054e9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/data_files/EO.csv" afterPath="$PROJECT_DIR$/species_profile/data_files/EO.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/data_files/LA.csv" afterPath="$PROJECT_DIR$/species_profile/data_files/LA.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/data_files/Species profile_SP.xlsx" afterPath="$PROJECT_DIR$/species_profile/data_files/Species profile_SP.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/data_files/SP.csv" afterPath="$PROJECT_DIR$/species_profile/data_files/SP.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/data_files/SP_pct.csv" afterPath="$PROJECT_DIR$/species_profile/data_files/SP_pct.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/pmf_plot.py" afterPath="$PROJECT_DIR$/species_profile/pmf_plot.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/species_profile/data_files/sp.csv" afterPath="$PROJECT_DIR$/species_profile/data_files/SP.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,8 +43,8 @@
           <file leaf-file-name="pmf_plot.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/species_profile/pmf_plot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+                <state relative-caret-position="161">
+                  <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -429,8 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/species_profile/pmf_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="161">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
