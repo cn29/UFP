@@ -4,19 +4,21 @@ import collections
 import datetime
 import matplotlib.pyplot as plt
 from math import ceil
+import numpy as np
 
 
 def wd_count(wind_data, theta, dates=[]):
     # theta of one direction
     theta = theta
-
     direct_count = [0]* int(360/theta)
 
     if len(dates) == 0:
         # count all dates in wind_data
         for day, wind_list in wind_data.items():
             for w in wind_list:
-                w = int(w)
+                if w == 'nan':
+                    w = -200
+                w = int(float(w))
                 if w<=0 or w >360:
                     continue
                 direct_count[int((w+theta/2)/theta)%16] += 1
@@ -24,7 +26,9 @@ def wd_count(wind_data, theta, dates=[]):
         # count only the date in dates
         for d in dates:
             for w in wind_data[d]:
-                w = int(w)
+                if w == 'nan':
+                    w = -200
+                w = int(float(w))
                 if w <= 0 or w > 360:
                     continue
                 direct_count[int((w+theta/2)/theta)%16] += 1
@@ -94,12 +98,13 @@ def get_next_day(date):
 if __name__ == '__main__':
 
     # setting
-    top_ratio = 0.5
+    top_ratio = 0.4
     wd_data_file = ''
     factor_data_file = ''
     site_name = ''
-    option = 3
-    theta = 45
+    option = 4
+    theta = 22.5
+    data_file_path = './data_files/'
 
     # read csv file
     if option == 1:
@@ -107,17 +112,21 @@ if __name__ == '__main__':
         factor_data_file = 'EO.csv'
         site_name = 'EO'
     elif option == 2:
-        wd_data_file = 'usc_campus_wd_scalar.csv'
+        wd_data_file = data_file_path+'KCALOSAN107_wd_scalar.csv'
         factor_data_file = 'LA.csv'
         site_name = 'LA'
     elif option == 3:
         wd_data_file = 'LA_airport_wd_scalar.csv'
         factor_data_file = 'LA.csv'
         site_name = 'LA-airport'
-    else:
-        wd_data_file = 'buchanan_wd_scalar.csv'
+    elif option == 4:
+        wd_data_file = data_file_path+'KCARICHM10_wd_scalar.csv'
         factor_data_file = 'SP2.csv'
         site_name = 'SP'
+    else:
+        wd_data_file = 'LA-north main street_wd_scalar.csv'
+        factor_data_file = 'LA.csv'
+        site_name = 'LA-north main street'
 
     print('wd_data_file: {}'.format(wd_data_file))
     print('site_name: {}'.format(site_name))
@@ -166,7 +175,11 @@ if __name__ == '__main__':
 
     # plot polar graph
     thetas = [x*theta/180 * 3.1415 for x in range(int(360/theta))]
+    width = [22 / 180 * 3.1415]
+
     fig, axes = plt.subplots(2, ceil(num_factors/2), subplot_kw=dict(polar=True))
+
+
     print(ceil(num_factors/2))
     for f in range(0, num_factors):
         row_fig_num = ceil(num_factors/2)
@@ -174,8 +187,11 @@ if __name__ == '__main__':
         y = int(f%row_fig_num)
         axes[x, y].set_theta_zero_location("N")
         axes[x, y].set_theta_direction(-1)
-        axes[x, y].plot(thetas+[thetas[0]], ratio[f]+[ratio[f][0]], 'ro-', linewidth=3)
-        axes[x, y].set_rmax(1)
+        axes[x, y].bar(thetas+[thetas[0]], ratio[f]+[ratio[f][0]],
+                                width=width, bottom=0.0, color='r', alpha=0.5)
+
+        # axes[x, y].plot(thetas+[thetas[0]], ratio[f]+[ratio[f][0]], 'ro-', linewidth=3)
+        axes[x, y].set_rmax(0.75)
         axes[x, y].set_rticks([x*0.25 for x in range(1,4)])  # less radial ticks
         axes[x, y].set_rlabel_position(0)  # get radial labels away from plotted line
         axes[x, y].grid(True)

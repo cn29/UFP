@@ -17,7 +17,7 @@ if __name__ == '__main__':
     output_wd = ''
     site = ''
     site_id = ''
-    option = 3
+    option = 5
 
     if option == 1:
         output_wd = 'oakland_int_wd_scalar.csv'
@@ -31,13 +31,16 @@ if __name__ == '__main__':
         output_wd = 'LA_airport_wd_scalar.csv'
         site = 'Los Angeles-International Airport'
         site_id = '2017'
-    else:
+    elif  option == 4:
         output_wd = 'buchanan_wd_scalar.csv'
         site = 'Buchanan'
         site_id = '5292'
-
+    else:
+        output_wd = 'LA-north main street_wd_scalar.csv'
+        site = 'Los Angeles-North Main Street'
+        site_id = '2899'
     # open wd 2016 file
-    file_wd_2016 = 'D:\Data\CA_wd_scalar_2016.csv'
+    file_wd_2016 = r'C:\Users\weixu\Google Drive\CodingProjects\UFP-master\wind_direction\CA_wd_scalar_2016.csv'
     filtered_2016 = []
 
     print('output_wd: {}'.format(output_wd))
@@ -62,19 +65,18 @@ if __name__ == '__main__':
         
         
     # open wd 2015 file 
-    file_name = 'D:\Data\kg_2015.txt'
+    file_name = r'C:\Users\weixu\Google Drive\CodingProjects\UFP-master\wind_direction\kg_2015.txt'
     filtered_2015 = []
     print('Processing wd file 2015: {}...'.format(file_name))
     f = open(file_name, 'r')
     for text in f:
         # find buchanan
-        if text.startswith(' '+site_id):
+        if text.startswith(' '+site_id): #the wind file has one string per row, site_id is the first
             text = re.sub(' ', '', text)
             row = text.split('|')
             date = '{}-{}-{}'.format(row[7], row[8], row[9])
             hour = row[10]
             wd = row[17]
-
             filtered_2015.append([date, hour, wd])
 
     # combine and save
