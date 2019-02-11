@@ -39,7 +39,7 @@ def plotData(tickers, data_matrix, plot_caption, figure_title, y_label, percent_
     ax2 = []
 
     for i in range(num_plots):
-        axarr[i].bar(x, data_matrix[i], width=0.75, log=True, alpha=0.5)
+        l1 = axarr[i].bar(x, data_matrix[i], width=0.75, log=True, alpha=0.5)
 
     for i in range(num_plots):
         axarr[i].set_xticks(x)
@@ -58,7 +58,7 @@ def plotData(tickers, data_matrix, plot_caption, figure_title, y_label, percent_
             print(percent_matrix[i])
             ax2.append(axarr[i].twinx())
             s2 = percent_matrix[i]
-            ax2[i].plot(x, s2, 'rh', alpha=0.6, markersize=4)
+            l2, = ax2[i].plot(x, s2, 'rh', alpha=0.6, markersize=4)
             # ax2[i].tick_params('y', colors='r')
             ax2[i].set_ylim(0, 100)
 
@@ -66,6 +66,7 @@ def plotData(tickers, data_matrix, plot_caption, figure_title, y_label, percent_
             axarr[i].xaxis.set_tick_params(labeltop='on')
 
     # plt.ylim((10 ** -1, 10 ** 3))
+    f.legend((l1, l2), ('Concentration', 'Percentage'), 'upper right')
     plt.show()
 
 
