@@ -1,0 +1,1 @@
+# Weekly average data simulation
