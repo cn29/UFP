@@ -104,7 +104,7 @@ if __name__ == '__main__':
     wd_data_file = ''
     factor_data_file = ''
     site_name = ''
-    option = 4
+    option = 2
     theta = 22.5
 
 
@@ -202,7 +202,7 @@ if __name__ == '__main__':
         axes[x, y].set_rlabel_position(0)  # get radial labels away from plotted line
         axes[x, y].grid(True)
 
-        axes[x, y].set_title("Factor {}: {}".format(f, factor_names[f]), va='bottom')
+        axes[x, y].set_title("{}".format(factor_names[f]), va='bottom')
 
     plt.suptitle('CPF for {}, with top {}'.format(site_name, top_ratio))
     plt.show()

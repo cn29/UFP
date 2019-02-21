@@ -66,7 +66,6 @@ def chews_met(startmonth, startday, startyear, dayspan, title, path, site):
 
     array = numpy.array(metdf)
     for i in numpy.arange(len(array)):
-        print(str(array[i,0]))
         try:
             dateTimeUTC.append(
                 datetime.datetime.strptime(array[i, 0], '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=0))
@@ -115,6 +114,6 @@ if __name__ == '__main__':
     site3 = 'KCARICHM5'
     site = 'KCACARME1'
 
-    chews_met(8, 1, 2015, 3, '', my_path, site3)
+    chews_met(8, 1, 2015, 366, '', my_path, site2)
 
 

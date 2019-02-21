@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ecf7ce-cae5-44a8-a7ad-562ea8a054e9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind_direction/data_files/KCARICHM10.df" afterPath="$PROJECT_DIR$/wind_direction/data_files/KCARICHM10.df" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/UFP.iml" afterPath="$PROJECT_DIR$/.idea/UFP.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/species_profile/pmf_plot.py" afterPath="$PROJECT_DIR$/species_profile/pmf_plot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind_direction/data_files/KCARICHM10_wd_scalar.csv" afterPath="$PROJECT_DIR$/wind_direction/data_files/KCARICHM10_wd_scalar.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind_direction/temp.txt" afterPath="$PROJECT_DIR$/wind_direction/temp.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind_direction/tempcleaned.txt" afterPath="$PROJECT_DIR$/wind_direction/tempcleaned.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind_direction/wd_crawler.py" afterPath="$PROJECT_DIR$/wind_direction/wd_crawler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind_direction/wind_main.py" afterPath="$PROJECT_DIR$/wind_direction/wind_main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +23,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="wind_main.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="wind_main.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/wind_direction/wind_main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2546">
-                  <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+                <state relative-caret-position="606">
+                  <caret line="127" column="9" lean-forward="true" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
                   <folding>
                     <element signature="e#49#59#0" expanded="true" />
                   </folding>
@@ -38,13 +45,35 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pmf_plot.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="pmf_plot.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/species_profile/pmf_plot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="559">
-                  <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+                <state relative-caret-position="399">
+                  <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wd_crawler.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="720">
+                  <caret line="116" column="29" lean-forward="false" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wd_crawler_reader.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler_reader.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="190">
+                  <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -106,7 +135,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wind_direction/__init__.py" />
-        <option value="$PROJECT_DIR$/wind_direction/wind_main.py" />
         <option value="$PROJECT_DIR$/wind_direction/data_load.py" />
         <option value="$PROJECT_DIR$/wind_direction/repo_config.py" />
         <option value="$PROJECT_DIR$/species_profile/repo_config.py" />
@@ -116,6 +144,8 @@
         <option value="$PROJECT_DIR$/species_profile/data_files/LA.csv" />
         <option value="$PROJECT_DIR$/species_profile/data_files/LA_pct.csv" />
         <option value="$PROJECT_DIR$/species_profile/pmf_plot.py" />
+        <option value="$PROJECT_DIR$/wind_direction/wd_crawler.py" />
+        <option value="$PROJECT_DIR$/wind_direction/wind_main.py" />
       </list>
     </option>
   </component>
@@ -166,6 +196,12 @@
               <item name="UFP" type="462c0819:PsiDirectoryNode" />
               <item name="wind_direction" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="UFP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UFP" type="462c0819:PsiDirectoryNode" />
+              <item name="wind_direction" type="462c0819:PsiDirectoryNode" />
+              <item name="data_files" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -205,41 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pmf_plot">
-    <configuration name="data_load" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind_direction" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UFP" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind_direction/data_load.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="pmf_plot (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python/pmf_plot" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UFP" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python/pmf_plot/pmf_plot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.wind_main">
     <configuration name="pmf_plot (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,6 +276,40 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="wd_crawler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind_direction" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="UFP" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind_direction/wd_crawler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="wd_crawler_reader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind_direction" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="UFP" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind_direction/wd_crawler_reader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="wind_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -292,19 +328,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.wind_main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.data_load" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pmf_plot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pmf_plot (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pmf_plot (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pmf_plot" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pmf_plot (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.wd_crawler" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wd_crawler_reader" />
+      <item index="4" class="java.lang.String" itemvalue="Python.wind_main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pmf_plot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pmf_plot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pmf_plot (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.pmf_plot (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.data_load" />
+        <item index="0" class="java.lang.String" itemvalue="Python.wind_main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.wd_crawler_reader" />
+        <item index="2" class="java.lang.String" itemvalue="Python.wd_crawler" />
+        <item index="3" class="java.lang.String" itemvalue="Python.pmf_plot" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pmf_plot" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +367,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18320313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19877206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27935535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -364,7 +400,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -630,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wind_direction/data_load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/species_profile/data_files/EO.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -668,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/species_profile/pmf_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+        <state relative-caret-position="399">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -678,15 +706,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="116" column="29" lean-forward="false" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind_direction/data_load.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind_direction/wind_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2546">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="606">
+          <caret line="127" column="9" lean-forward="true" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
           <folding>
             <element signature="e#49#59#0" expanded="true" />
           </folding>
