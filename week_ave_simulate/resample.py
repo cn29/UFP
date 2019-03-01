@@ -69,7 +69,7 @@ if __name__ == "__main__":
     fig, axes = plt.subplots(1, len(num_weeks))
 
     mean_3day_arr = np.zeros([len(num_weeks), 7])
-    var_3day_arr = np.zeros([len(num_weeks), 7])
+    std_3day_arr = np.zeros([len(num_weeks), 7])
 
     for x in range(0, len(repeat)):
         for y in range(0, len(num_weeks)):
@@ -83,18 +83,18 @@ if __name__ == "__main__":
                     mean_data_3day[w, i] = mean_test_3day[w]
 
             mean_mean_data = mean_data.mean(axis=1)
-            var_mean_data = np.sqrt(mean_data.var(axis=1))
+            std_mean_data = mean_data.std(axis=1)
             mean_mean_data_3day = mean_data_3day.mean(axis=1)
-            var_mean_data_3day = np.sqrt(mean_data_3day.var(axis=1))
+            std_mean_data_3day = mean_data_3day.std(axis=1)
 
-            axes[y].errorbar(range(7), means_x, yerr=var_mean_data, fmt='-o', capsize=4)
-            axes[y].errorbar(range(7), mean_mean_data_3day, yerr=var_mean_data_3day, fmt='-o', capsize=4)
+            axes[y].errorbar(range(7), means_x, yerr=std_mean_data, fmt='-o', capsize=4)
+            axes[y].errorbar(range(7), mean_mean_data_3day, yerr=std_mean_data_3day, fmt='-o', capsize=4)
             axes[y].legend(['original', '3day re-sample'])
             axes[y].set_title("num of weeks={}".format(num_weeks[y]), va='bottom')
             axes[y].set_ylim([10,65])
 
             mean_3day_arr[y] = mean_mean_data_3day
-            var_3day_arr[y] = var_mean_data_3day
+            std_3day_arr[y] = std_mean_data_3day
 
     # plt.plot(range(7), mean_test, '-o')
     # plt.plot(range(7), mean_test_3day, '-o')
@@ -102,7 +102,7 @@ if __name__ == "__main__":
     if 0:
         plt.figure(2)
         for i in range(len(num_weeks)):
-            plt.errorbar(range(7), mean_3day_arr[i], yerr=var_3day_arr[i], fmt='-o', capsize=4)
+            plt.errorbar(range(7), mean_3day_arr[i], yerr=std_3day_arr[i], fmt='-o', capsize=4)
 
         plt.legend(num_weeks)
 
