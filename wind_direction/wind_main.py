@@ -9,7 +9,7 @@ import numpy as np
 from repo_config import *
 
 
-def wd_count(wind_data, theta, dates=[]):
+def wd_count(wind_data, theta, dates=[], wind_screen = 1.5):
     # theta of one direction
     theta = theta
     direct_count = [0]* int(360/theta)
@@ -17,23 +17,27 @@ def wd_count(wind_data, theta, dates=[]):
     if len(dates) == 0:
         # count all dates in wind_data
         for day, wind_list in wind_data.items():
-            for w in wind_list:
-                if w == 'nan':
-                    w = -200
-                w = int(float(w))
-                if w<=0 or w >360:
+            for wd, ws in wind_list:
+                if wd == 'nan':
+                    wd = -200
+                wd = int(float(wd))
+                ws = float(ws)
+                if wd<=0 or wd >360 or ws < wind_screen:
                     continue
-                direct_count[int((w+theta/2)/theta)%16] += 1
+
+                direct_count[int((wd+theta/2)/theta)%16] += 1
     else:
         # count only the date in dates
         for d in dates:
-            for w in wind_data[d]:
-                if w == 'nan':
-                    w = -200
-                w = int(float(w))
-                if w <= 0 or w > 360:
+            for wd, ws in wind_data[d]:
+                if wd == 'nan':
+                    wd = -200
+                wd = int(float(wd))
+                ws = float(ws)
+                if wd<=0 or wd >360 or ws < wind_screen:
                     continue
-                direct_count[int((w+theta/2)/theta)%16] += 1
+
+                direct_count[int((wd+theta/2)/theta)%16] += 1
 
     return direct_count
 
@@ -49,7 +53,7 @@ def read_wd_data(wd_data_file):
         for row in csv_reader:
             if row[0] != curr_date:
                 curr_date = row[0]
-            wind_data[curr_date].append(row[2])
+            wind_data[curr_date].append((row[2], row[3]))
 
     return wind_data
 
@@ -100,31 +104,48 @@ def get_next_day(date):
 if __name__ == '__main__':
 
     # setting
-    top_ratio = 0.4
+    top_ratio = 0.2
     wd_data_file = ''
     factor_data_file = ''
     site_name = ''
-    option = 2
+    option = 1
     theta = 22.5
-
+    wind_screen = 2
 
     # read csv file
     if option == 1:
-        wd_data_file = 'oakland_int_wd_scalar.csv'
+        wd_data_file = 'oakland_int_wdws_scalar.csv'
+        wind_site = 'oakland airport'
         factor_data_file = 'EO.csv'
         site_name = 'EO'
     elif option == 2:
-        wd_data_file = 'KCALOSAN107_wd_scalar.csv'
+        wd_data_file = 'burbank_airport_wdws_scalar.csv'
+        wind_site = 'burbank airport'
         factor_data_file = 'LA.csv'
         site_name = 'LA'
     elif option == 3:
-        wd_data_file = 'LA_airport_wd_scalar.csv'
+        wd_data_file = 'LA_airport_wdws_scalar.csv'
         factor_data_file = 'LA.csv'
-        site_name = 'LA-airport'
+        wind_site = 'LA airport'
+        site_name = 'LA'
     elif option == 4:
-        wd_data_file = 'KCARICHM10_wd_scalar.csv'
+        wd_data_file = 'buchanan_wdws_scalar.csv'
         factor_data_file = 'SP2.csv'
         site_name = 'SP'
+    elif option == 5:
+        wd_data_file = 'KCARICHM10_wdws_scalar.csv'  # not good
+        factor_data_file = 'SP2.csv'
+        site_name = 'SP'
+    elif option == 6:
+        wd_data_file = 'santa_airport_wdws_scalar.csv'  # not good
+        factor_data_file = 'LA.csv'
+        wind_site = 'santa monica airport'
+        site_name = 'LA'
+    elif option == 7:
+        wd_data_file = 'hawthorne_airport_wdws_scalar.csv'
+        factor_data_file = 'LA.csv'
+        wind_site = 'Hawthorne Municipal Airport'
+        site_name = 'LA'
     else:
         wd_data_file = 'LA-north main street_wd_scalar.csv'
         factor_data_file = 'LA.csv'
@@ -153,7 +174,7 @@ if __name__ == '__main__':
 
 
     # count directions
-    all_count = wd_count(wind_data, theta, pick_dates)
+    all_count = wd_count(wind_data, theta, pick_dates, wind_screen = wind_screen)
     for i in range(len(all_count)):
         if all_count[i] == 0:
             all_count[i] = 1
@@ -181,7 +202,7 @@ if __name__ == '__main__':
 
     # plot polar graph
     thetas = [x*theta/180 * 3.1415 for x in range(int(360/theta))]
-    width = [22 / 180 * 3.1415]
+    width = [(theta-0.5) / 180 * 3.1415]
 
     fig, axes = plt.subplots(2, ceil(num_factors/2), subplot_kw=dict(polar=True))
 
@@ -197,12 +218,15 @@ if __name__ == '__main__':
                                 width=width, bottom=0.0, color='r', alpha=0.5)
 
         # axes[x, y].plot(thetas+[thetas[0]], ratio[f]+[ratio[f][0]], 'ro-', linewidth=3)
-        axes[x, y].set_rmax(0.75)
+        axes[x, y].set_rmax(1.5)
         axes[x, y].set_rticks([x*0.25 for x in range(1,4)])  # less radial ticks
-        axes[x, y].set_rlabel_position(0)  # get radial labels away from plotted line
+        axes[x, y].set_rlabel_position(70)  # get radial labels away from plotted line
         axes[x, y].grid(True)
+        y_position = 1.08
+        if x == 1:
+            y_position = -0.2
 
-        axes[x, y].set_title("{}".format(factor_names[f]), va='bottom')
+        axes[x, y].set_title("{}".format(factor_names[f]), y=y_position,fontsize=18)
 
-    plt.suptitle('CPF for {}, with top {}'.format(site_name, top_ratio))
+    plt.suptitle('CPF for {}, top {}, with wind speed screening, wind site "{}"'.format(site_name, top_ratio, wind_site), fontsize=20)
     plt.show()

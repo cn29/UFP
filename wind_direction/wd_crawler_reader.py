@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     site1 = 'KCALOSAN107'
     site2 = 'KCARICHM10'
-    site = site2
+    site = site1
     file_name = './data_files/'+site+'.df'
     print('Reading '+file_name)
     crawler_save = pandas.read_pickle(file_name)
@@ -22,11 +22,10 @@ if __name__ == '__main__':
         ws = getattr(row, 'Wspd')
         if float(ws) < 0.1:
             continue
-        filter_wd.append([day, hour, wd])
-
+        filter_wd.append([day, hour, wd, ws])
 
     # save to csv
-    output_wd = './data_files/'+site+'_wd_scalar.csv'
+    output_wd = './data_files/'+site+'_wdws_scalar.csv'
     print('Saving to {}...'.format(output_wd))
     with open(output_wd, "w", newline="") as f:
         writer = csv.writer(f)

@@ -114,6 +114,6 @@ if __name__ == '__main__':
     site3 = 'KCARICHM5'
     site = 'KCACARME1'
 
-    chews_met(8, 1, 2015, 366, '', my_path, site2)
+    chews_met(8, 1, 2015, 366, '', my_path, site1)
 
 
