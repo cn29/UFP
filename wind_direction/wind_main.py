@@ -104,7 +104,11 @@ def get_next_day(date):
 if __name__ == '__main__':
 
     # setting
+<<<<<<< Updated upstream
     top_ratio = 0.2
+=======
+    top_ratio = 0.15
+>>>>>>> Stashed changes
     wd_data_file = ''
     factor_data_file = ''
     site_name = ''
@@ -129,11 +133,15 @@ if __name__ == '__main__':
         wind_site = 'LA airport'
         site_name = 'LA'
     elif option == 4:
+<<<<<<< Updated upstream
         wd_data_file = 'buchanan_wdws_scalar.csv'
         factor_data_file = 'SP2.csv'
         site_name = 'SP'
     elif option == 5:
         wd_data_file = 'KCARICHM10_wdws_scalar.csv'  # not good
+=======
+        wd_data_file = 'buchanan_wd_scalar.csv'
+>>>>>>> Stashed changes
         factor_data_file = 'SP2.csv'
         site_name = 'SP'
     elif option == 6:
@@ -218,9 +226,15 @@ if __name__ == '__main__':
                                 width=width, bottom=0.0, color='r', alpha=0.5)
 
         # axes[x, y].plot(thetas+[thetas[0]], ratio[f]+[ratio[f][0]], 'ro-', linewidth=3)
+<<<<<<< Updated upstream
         axes[x, y].set_rmax(1.5)
         axes[x, y].set_rticks([x*0.25 for x in range(1,4)])  # less radial ticks
         axes[x, y].set_rlabel_position(70)  # get radial labels away from plotted line
+=======
+        axes[x, y].set_rmax(0.5)
+        axes[x, y].set_rticks([x*0.1 for x in range(1,4)])  # less radial ticks
+        axes[x, y].set_rlabel_position(0)  # get radial labels away from plotted line
+>>>>>>> Stashed changes
         axes[x, y].grid(True)
         y_position = 1.08
         if x == 1:

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ecf7ce-cae5-44a8-a7ad-562ea8a054e9" name="Default" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/UFP.iml" afterPath="$PROJECT_DIR$/.idea/UFP.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/week_ave_simulate/resample.py" afterPath="$PROJECT_DIR$/week_ave_simulate/resample.py" />
+      <change beforePath="$PROJECT_DIR$/wind_direction/wind_main.py" afterPath="$PROJECT_DIR$/wind_direction/wind_main.py" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +24,37 @@
       <file leaf-file-name="resample.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/week_ave_simulate/resample.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="115">
               <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+=======
+            <state relative-caret-position="1513">
+              <caret line="89" column="78" lean-forward="false" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calculate weekly profile and t test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/Calculate weekly profile and t test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resample_old.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/resample_old.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1105">
+              <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -43,6 +80,11 @@
       <find>readCSV</find>
       <find>spot</find>
       <find>y_label</find>
+      <find>week_data</find>
+      <find>np.zeros</find>
+      <find>append</find>
+      <find>week_group</find>
+      <find>num_weeks</find>
       <find>print</find>
       <find>get_week_ave</find>
       <find>[]</find>
@@ -91,16 +133,22 @@
         <option value="$PROJECT_DIR$/hessianM.py" />
         <option value="$PROJECT_DIR$/wind_direction/wd_crawler_reader.py" />
         <option value="$PROJECT_DIR$/wind_direction/wd_crawler.py" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/wind_direction/data_load.py" />
+=======
+        <option value="$PROJECT_DIR$/wordcount.py" />
+        <option value="$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/Calculate weekly profile and t test.py" />
+        <option value="$PROJECT_DIR$/week_ave_simulate/resample.py" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/wind_direction/wind_main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1449" />
-    <option name="height" value="967" />
+    <option name="x" value="120" />
+    <option name="y" value="68" />
+    <option name="width" value="844" />
+    <option name="height" value="787" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -183,19 +231,32 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.wind_main">
+<<<<<<< Updated upstream
     <configuration name="data_load" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="Calculate weekly profile and t test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> Stashed changes
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< Updated upstream
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind_direction" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="UFP" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind_direction/data_load.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="UFP" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/Calculate weekly profile and t test.py" />
+>>>>>>> Stashed changes
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,37 +280,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="wd_crawler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="resample_old" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind_direction" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="UFP" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind_direction/wd_crawler.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="wd_crawler_reader" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wind_direction" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UFP" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wind_direction/wd_crawler_reader.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/resample_old.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,20 +316,53 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="wordcount" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="UFP" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordcount.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
+<<<<<<< Updated upstream
       <item index="0" class="java.lang.String" itemvalue="Python.wd_crawler" />
       <item index="1" class="java.lang.String" itemvalue="Python.wd_crawler_reader" />
       <item index="2" class="java.lang.String" itemvalue="Python.wind_main" />
       <item index="3" class="java.lang.String" itemvalue="Python.resample" />
       <item index="4" class="java.lang.String" itemvalue="Python.data_load" />
+=======
+      <item index="0" class="java.lang.String" itemvalue="Python.wind_main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.resample" />
+      <item index="2" class="java.lang.String" itemvalue="Python.resample_old" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wordcount" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Calculate weekly profile and t test" />
+>>>>>>> Stashed changes
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.wind_main" />
+<<<<<<< Updated upstream
         <item index="1" class="java.lang.String" itemvalue="Python.data_load" />
         <item index="2" class="java.lang.String" itemvalue="Python.wd_crawler_reader" />
         <item index="3" class="java.lang.String" itemvalue="Python.wd_crawler" />
         <item index="4" class="java.lang.String" itemvalue="Python.resample" />
+=======
+        <item index="1" class="java.lang.String" itemvalue="Python.resample" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Calculate weekly profile and t test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.wordcount" />
+        <item index="4" class="java.lang.String" itemvalue="Python.resample_old" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -335,9 +411,13 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37759018" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29453126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -349,6 +429,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+<<<<<<< Updated upstream
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -357,10 +438,70 @@
         </breakpoint>
       </default-breakpoints>
       <option name="time" value="16" />
+=======
+      <option name="time" value="7" />
+>>>>>>> Stashed changes
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/wind_direction/data_load.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2204">
+          <caret line="116" column="29" lean-forward="false" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/species_profile/pmf_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python/pmfplot/pmf_plot.py" />
+    <entry file="file://$PROJECT_DIR$/wind_direction/usc_campus_wd_scalar.csv" />
+    <entry file="file://$PROJECT_DIR$/wind_direction/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/species_profile/repo_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/../Python/pmf_plot/pmf_plot.py" />
     <entry file="file://$PROJECT_DIR$/wind_direction/repo_config.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -384,7 +525,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
           <folding>
+<<<<<<< Updated upstream
             <element signature="e#0#10#0" expanded="false" />
+=======
+            <element signature="e#0#10#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -446,7 +591,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
           <folding>
+<<<<<<< Updated upstream
             <element signature="e#0#10#0" expanded="false" />
+=======
+            <element signature="e#0#10#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -566,6 +715,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/wind_direction/data_files/oakland_int_wdws_scalar.csv" />
     <entry file="file://$PROJECT_DIR$/hessianM.py" />
     <entry file="file://$PROJECT_DIR$/wind_direction/data_files/KCALOSAN107_wd_scalar.csv" />
@@ -594,12 +744,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/wordcount.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/Calculate weekly profile and t test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+>>>>>>> Stashed changes
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/wind_direction/data_files/burbank_airport_wdws_scalar.csv" />
     <entry file="file://$PROJECT_DIR$/wind_direction/data_files/LA_airport_wdws_scalar.csv" />
     <entry file="file://$PROJECT_DIR$/wind_direction/wind_main.py">
@@ -608,28 +772,49 @@
           <caret line="107" column="21" lean-forward="true" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
           <folding>
             <element signature="e#49#59#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/resample_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind_direction/data_load.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="280">
           <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+=======
+        <state relative-caret-position="102">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#10#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/wordcount.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/wind_direction/wd_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="86" column="65" lean-forward="false" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/../../Research/Data and figures for python calculation/python3/project1/data/Calculate weekly profile and t test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -643,13 +828,47 @@
         <state relative-caret-position="1105">
           <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/species_profile/pmf_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind_direction/data_load.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind_direction/wind_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="199" column="31" lean-forward="false" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
+          <folding>
+            <element signature="e#49#59#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/week_ave_simulate/resample.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="115">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+=======
+        <state relative-caret-position="1513">
+          <caret line="89" column="78" lean-forward="false" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="78" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

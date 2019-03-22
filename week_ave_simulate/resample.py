@@ -21,7 +21,7 @@ def resample(week_data, weeks):
         data_3day[ii+1] = average
         data_3day[ii+2] = average
     # compute mean of each day in a week
-    week_group = []
+    week_group = []                                                     #arrange the one-line data_3day to a matrix
     #print (week_group)
     mean_3day = np.zeros([7])
     mean_count = np.zeros([7])
@@ -36,34 +36,65 @@ def resample(week_data, weeks):
             else:
                 break
     mean_3day /= mean_count
-    return week_group, data_3day, mean_3day
-
-
+    return week_group, data_3day, mean_3day                             #week_group:matrix of resampled data,
+                                                                        #data_3day: a line of resampled data
+                                                                        #mean_3day: seven numbers of mean for each day
 def get_week_ave(means, sigma, num_weeks):
     week_data = week_simulate(means, sigma, num_weeks)
-    # compute mean of each day in a week
+    # compute mean of each day for generated data
     mean_test = np.mean(week_data, axis=1)
     # print("Sample mean for each day in a week: \n\t", mean_test)
     # flatten (2d -> 1d): from [7, weeks] to [7*weeks]
     week_data = week_data.flatten('F')
     # re-sample, 3 continues days
     # print("Re-sample data by a group of 3 continues days....")
-    week_group, data_3day, mean_test_3day = resample(week_data, num_weeks)
+    week_group, data_3day, mean_test_3day = resample(week_data, num_weeks) #?
 
-    return mean_test_3day, mean_test
+    #count elements in each day in week_group, find min
+    num_element = np.zeros(7)
+    min_num_element = 0
+    for i in range(7):
+        num_element[i] = len(week_group[i])
+
+    min_num_elememt = min(num_element)
+    #print(min_num_elememt)
+
+    week_group2 = np.zeros([7,int(min_num_elememt)])                           #week_group2: week_group in array format
+    for i in range(7):
+        for j in range(int(min_num_elememt)):
+            week_group2[i,j] = week_group[i][j]
+
+    imin = 0
+    imax = 0
+    for i in range(7):
+        if mean_test_3day[i] < mean_test_3day[imin]:
+            imin = i
+        if mean_test_3day[i] > mean_test_3day[imax]:
+            imax = i
+
+    #print(imax, imin, len(week_group[imin]),len(week_group[imax]))
+    [_, pvalue] = stats.ttest_rel(week_group2[imin], week_group2[imax])
+    #print('p value is', pvalue)
+
+    return mean_test_3day, mean_test, pvalue                            #mean_test_3day: seven mean for resampled data
+                                                                        #mean_test: seven mean for generated data
+                                                                        #pvalue: p value for one set of experiment
 
 
 if __name__ == "__main__":
     # set print format
     float_formatter = lambda x: "%.3f" % x
     np.set_printoptions(formatter={'float_kind': float_formatter})
-    num_weeks = [10, 20, 50, 100]
+    num_weeks = [5,10,20,30,50,100]
     repeat = [30]
     means_x = np.asarray([35.5123, 44.3578, 48.0436, 43.5154, 34.7159, 28.6967, 29.7039])
     sigma_x = np.asarray([35.5123, 44.3578, 48.0436, 43.5154, 34.7159, 28.6967, 29.7039])
     sigma_x = 0.7*sigma_x
     means = np.log(means_x/np.sqrt(1+np.square(sigma_x)/np.square(means_x)))
     sigma = np.sqrt(np.log(1+np.square(sigma_x)/np.square(means_x)))
+
+
+
 
     # plot
     fig, axes = plt.subplots(1, len(num_weeks))
@@ -75,23 +106,31 @@ if __name__ == "__main__":
         for y in range(0, len(num_weeks)):
             mean_data = np.zeros([7, repeat[x]])
             mean_data_3day = np.zeros([7, repeat[x]])
+            pvalue_group = np.zeros(repeat[0])
             for i in range(repeat[x]):
                 n = num_weeks[y]
-                mean_test_3day, mean_test = get_week_ave(means, sigma, n)
+                mean_test_3day, mean_test, pvalue = get_week_ave(means, sigma, n)
+
+                pvalue_group[i] = pvalue
                 for w in range(7):
-                    mean_data[w, i] = mean_test[w]
+                    mean_data[w, i] = mean_test[w]                                      #append data in mean_test to mean_data
                     mean_data_3day[w, i] = mean_test_3day[w]
+
 
             mean_mean_data = mean_data.mean(axis=1)
             std_mean_data = mean_data.std(axis=1)
             mean_mean_data_3day = mean_data_3day.mean(axis=1)
             std_mean_data_3day = mean_data_3day.std(axis=1)
+            mean_pvalue = pvalue_group.mean()
+            print('The mean p value for',num_weeks[y],'weeks is', mean_pvalue)
+            print('The day-of-week concentrations for 3-day are\n', mean_mean_data_3day)
 
             axes[y].errorbar(range(7), means_x, yerr=std_mean_data, fmt='-o', capsize=4)
             axes[y].errorbar(range(7), mean_mean_data_3day, yerr=std_mean_data_3day, fmt='-o', capsize=4)
-            axes[y].legend(['original', '3day re-sample'])
-            axes[y].set_title("num of weeks={}".format(num_weeks[y]), va='bottom')
+            axes[y].legend(['A=True', 'B=3-day average'])
+            axes[y].set_title(f"num of weeks={num_weeks[y]}\np-value={round(mean_pvalue,5)}", va='bottom')
             axes[y].set_ylim([10,65])
+
 
             mean_3day_arr[y] = mean_mean_data_3day
             std_3day_arr[y] = std_mean_data_3day
@@ -104,6 +143,8 @@ if __name__ == "__main__":
         for i in range(len(num_weeks)):
             plt.errorbar(range(7), mean_3day_arr[i], yerr=std_3day_arr[i], fmt='-o', capsize=4)
 
+
         plt.legend(num_weeks)
+
 
     plt.show()
