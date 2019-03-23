@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
 
     # plot
-    fig, axes = plt.subplots(1, len(num_weeks))
+    fig, axes = plt.subplots(2, int(len(num_weeks)/2))
 
     mean_3day_arr = np.zeros([len(num_weeks), 7])
     std_3day_arr = np.zeros([len(num_weeks), 7])
@@ -125,13 +125,23 @@ if __name__ == "__main__":
             print('The mean p value for',num_weeks[y],'weeks is', mean_pvalue)
             print('The day-of-week concentrations for 3-day are\n', mean_mean_data_3day)
 
-            axes[y].errorbar(range(7), means_x, yerr=std_mean_data, fmt='-o', capsize=4)
-            axes[y].errorbar(range(7), mean_mean_data_3day, yerr=std_mean_data_3day, fmt='-o', capsize=4)
-            axes[y].legend(['A=True', 'B=3-day average'])
-            axes[y].set_title(f"num of weeks={num_weeks[y]}\np-value={round(mean_pvalue,5)}", va='bottom')
-            axes[y].set_ylim([10,65])
+            x1 = int((y)/3)
+            x2 = y%3
+            a = axes[x1, x2].errorbar(range(7), means_x, yerr=std_mean_data, color='black',
+                                      fmt='-o', capsize=4, linestyle=':', alpha=0.5)
+            a[-1][0].set_linestyle(':')
+            if x2 == 0:
+                axes[x1, x2].set_ylabel('ng/m$^3$')
 
-
+            axes[x1, x2].errorbar(range(7), mean_mean_data_3day, yerr=std_mean_data_3day, color='black',
+                                  fmt='-o', capsize=4)
+            axes[x1, x2].legend(['A=True', 'B=3-day average'])
+            axes[x1, x2].set_title(f"num of weeks={num_weeks[y]}\np-value={round(mean_pvalue,5)}", va='bottom')
+            axes[x1, x2].set_ylim([10,65])
+            axes[x1, x2].set_xticks(range(7))
+            axes[x1, x2].set_xticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'])
+            for tick in axes[x1, x2].xaxis.get_major_ticks():
+                tick.label.set_fontsize(11)
             mean_3day_arr[y] = mean_mean_data_3day
             std_3day_arr[y] = std_mean_data_3day
 
@@ -143,8 +153,14 @@ if __name__ == "__main__":
         for i in range(len(num_weeks)):
             plt.errorbar(range(7), mean_3day_arr[i], yerr=std_3day_arr[i], fmt='-o', capsize=4)
 
-
         plt.legend(num_weeks)
+
+    plt.subplots_adjust(top = 0.88,
+                        bottom = 0.11,
+                        left = 0.11,
+                        right = 0.9,
+                        hspace = 0.29,
+                        wspace = 0.2)
 
 
     plt.show()
