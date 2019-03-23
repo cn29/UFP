@@ -136,7 +136,8 @@ if __name__ == "__main__":
             axes[x1, x2].errorbar(range(7), mean_mean_data_3day, yerr=std_mean_data_3day, color='black',
                                   fmt='-o', capsize=4)
             axes[x1, x2].legend(['A=True', 'B=3-day average'])
-            axes[x1, x2].set_title(f"num of weeks={num_weeks[y]}\np-value={round(mean_pvalue,5)}", va='bottom')
+            title_string = 'num of weeks={}\npvalue={:.4f}'.format(num_weeks[y],mean_pvalue)
+            axes[x1, x2].set_title(title_string, va='bottom')
             axes[x1, x2].set_ylim([10,65])
             axes[x1, x2].set_xticks(range(7))
             axes[x1, x2].set_xticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'])

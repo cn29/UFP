@@ -150,7 +150,7 @@ if __name__ == '__main__':
             ax[i-1].set_xticks(range(7))
             ax[i-1].set_xticklabels(['Mon','Tue','Wed','Thu','Fri','Sat','Sun'])
             for tick in ax[i-1].xaxis.get_major_ticks():
-                tick.label.set_fontsize(13)
+                tick.label.set_fontsize(11)
             for tick in ax[i-1].yaxis.get_major_ticks():
                 tick.label.set_fontsize(13)
             title_str = elem_name[i-1] + '  Mean=' + '{:.3f}'.format(a_mean) + ' ng/m$^3$'
@@ -161,12 +161,21 @@ if __name__ == '__main__':
     #fig.tight_layout()
     #fig.savefig('temp.png', dpi=400)
     plt.subplots_adjust(hspace=0.4)
+
+
+    plt.subplots_adjust(top = 0.88,
+                        bottom = 0.11,
+                        left = 0.11,
+                        right = 0.9,
+                        hspace = 0.46,
+                        wspace = 0.2)
+
     plt.show()
     print('-------- print p values --------')
     attach_sign = ''
     for j in range(len(elem_name)):
         attach_sign = '*' if pValue_list[j] < 0.05 else ''
-        line = '{}\t: {:3f} {}'.format(elem_name[j], pValue_list[j], attach_sign)
+        line = '{}\t: {:.3f} {}'.format(elem_name[j], pValue_list[j], attach_sign)
         print(line)
 
     # write to cs
