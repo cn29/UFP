@@ -108,12 +108,13 @@ if __name__ == '__main__':
     wd_data_file = ''
     factor_data_file = ''
     site_name = ''
-    option = 1
+    option = 4
     theta = 22.5
     wind_screen = 2
 
     # read csv file
-    if option == 1:
+    # use wdws, which includes both wind speed and wind direction
+    if option == 1: #used this for final results
         wd_data_file = 'oakland_int_wdws_scalar.csv'
         wind_site = 'oakland airport'
         factor_data_file = 'EO.csv'
@@ -130,7 +131,8 @@ if __name__ == '__main__':
         site_name = 'LA'
     elif option == 4:
         wd_data_file = 'buchanan_wdws_scalar.csv'
-        factor_data_file = 'SP2.csv'
+        factor_data_file = 'SP.csv'
+        wind_site = 'buchanan'
         site_name = 'SP'
     elif option == 5:
         wd_data_file = 'buchanan_wd_scalar.csv'
@@ -194,7 +196,7 @@ if __name__ == '__main__':
             top_dates_ext.append(next_next)
 
         # count only for top dates
-        select_count = wd_count(wind_data, theta, top_dates_ext)
+        select_count = wd_count(wind_data, theta, top_dates_ext, wind_screen)
         print(f, select_count)
 
         # ratio plot
@@ -214,13 +216,13 @@ if __name__ == '__main__':
         y = int(f%row_fig_num)
         axes[x, y].set_theta_zero_location("N")
         axes[x, y].set_theta_direction(-1)
-        axes[x, y].bar(thetas+[thetas[0]], ratio[f]+[ratio[f][0]],
+        axes[x, y].bar(thetas, ratio[f],
                                 width=width, bottom=0.0, color='r', alpha=0.5)
 
         # axes[x, y].plot(thetas+[thetas[0]], ratio[f]+[ratio[f][0]], 'ro-', linewidth=3)
-        axes[x, y].set_rmax(0.5)
-        axes[x, y].set_rticks([x*0.1 for x in range(1,4)])  # less radial ticks
-        axes[x, y].set_rlabel_position(0)  # get radial labels away from plotted line
+        axes[x, y].set_rmax(0.6)
+        axes[x, y].set_rticks([x*0.2 for x in range(1,4)])  # less radial ticks
+        axes[x, y].set_rlabel_position(60)  # get radial labels away from plotted line
 
         axes[x, y].grid(True)
         y_position = 1.08
